@@ -1,11 +1,18 @@
 {
-    "name": "Covid-19 Stats UK",
+    "name": "ScreenTime Tracker",
     "version": "1.0.0",
-    "description": "latest covid data of UK",
+    "description": "This extension will help you to track your screen time",
     "manifest_version": 3,
-    "author": "Sampurna Chapagain",
-    "action":{
+    "author": "Prusacov Andrei",
+    "action": {
         "default_popup": "index.html",
-        "default_title": "Latest Covid Report"
+        "default_title": "ScreenTime"
+    },
+    "permissions": ["storage"],
+    "background": {
+        "service_worker": "background_script.js"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
     }
 }
